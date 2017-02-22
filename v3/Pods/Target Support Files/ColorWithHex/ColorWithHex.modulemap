@@ -1,0 +1,6 @@
+framework module ColorWithHex {
+  umbrella header "ColorWithHex-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_ANO {
+  umbrella header "Pods-ANO-umbrella.h"
+
+  export *
+  module * { export * }
+}

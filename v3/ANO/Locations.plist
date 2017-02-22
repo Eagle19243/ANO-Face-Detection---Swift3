@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Address</key>
+		<string>Columbus, Ohio</string>
+		<key>Icon</key>
+		<string>icon_columbus</string>
+		<key>Latitude</key>
+		<real>40.013383</real>
+		<key>Longitude</key>
+		<real>-83.028356</real>
+		<key>Universities</key>
+		<array>
+			<dict>
+				<key>Icon</key>
+				<string>icon_ohio_state_university</string>
+				<key>Email</key>
+				<string>@osu.edu</string>
+				<key>Name</key>
+				<string>Ohio State University</string>
+			</dict>
+			<dict>
+				<key>Icon</key>
+				<string>icon_capital_university</string>
+				<key>Email</key>
+				<string>@capital.edu</string>
+				<key>Name</key>
+				<string>Capital University</string>
+			</dict>
+			<dict>
+				<key>Icon</key>
+				<string>icon_ohio_domincan_university</string>
+				<key>Email</key>
+				<string>@ohiodominican.edu</string>
+				<key>Name</key>
+				<string>Ohio Dominican University</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Pittsburgh, PA</string>
+		<key>Icon</key>
+		<string>icon_pittsburgh</string>
+		<key>Latitude</key>
+		<real>40.440624</real>
+		<key>Longitude</key>
+		<real>-79.99588799999999</real>
+		<key>Universities</key>
+		<array>
+			<dict>
+				<key>Icon</key>
+				<string>icon_pittsburgh_university</string>
+				<key>Email</key>
+				<string>@pitt.edu</string>
+				<key>Name</key>
+				<string>University of Pittsburgh</string>
+			</dict>
+			<dict>
+				<key>Icon</key>
+				<string>icon_carnegie_mellon_university</string>
+				<key>Email</key>
+				<string>@cmu.edu</string>
+				<key>Name</key>
+				<string>Carnegie Mellon University</string>
+			</dict>
+			<dict>
+				<key>Icon</key>
+				<string>icon_point_park_university</string>
+				<key>Email</key>
+				<string>@pointpark.edu</string>
+				<key>Name</key>
+				<string>Point Park University</string>
+			</dict>
+			<dict>
+				<key>Icon</key>
+				<string>icon_duquesne_university</string>
+				<key>Email</key>
+				<string>@duq.edu</string>
+				<key>Name</key>
+				<string>Duquesne University</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Athens, Ohio</string>
+		<key>Icon</key>
+		<string>icon_athens</string>
+		<key>Latitude</key>
+		<real>39.32924</real>
+		<key>Longitude</key>
+		<real>-82.10126</real>
+		<key>Universities</key>
+		<array>
+			<dict>
+				<key>Icon</key>
+				<string>icon_ohio_university</string>
+				<key>Email</key>
+				<string>@ohio.edu</string>
+				<key>Name</key>
+				<string>Ohio University</string>
+			</dict>
+			<dict>
+				<key>Icon</key>
+				<string>icon_hocking_university</string>
+				<key>Email</key>
+				<string>@hocking.edu</string>
+				<key>Name</key>
+				<string>Hocking University</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Cincinnati, Ohio</string>
+		<key>Icon</key>
+		<string>icon_cincinnati</string>
+		<key>Latitude</key>
+		<real>39.162</real>
+		<key>Longitude</key>
+		<real>-84.45689</real>
+		<key>Universities</key>
+		<array>
+			<dict>
+				<key>Icon</key>
+				<string>icon_cincinnati_university</string>
+				<key>Email</key>
+				<string>@uc.edu</string>
+				<key>Name</key>
+				<string>University of Cincinnati</string>
+			</dict>
+			<dict>
+				<key>Icon</key>
+				<string>icon_xavier_university</string>
+				<key>Email</key>
+				<string>@xavier.edu</string>
+				<key>Name</key>
+				<string>Xavier University</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

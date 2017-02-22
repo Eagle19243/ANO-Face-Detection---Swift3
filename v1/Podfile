@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'ANO' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ANO
+	pod 'Firebase/Auth'
+	pod 'Firebase/Database'
+	pod 'Firebase/Storage'
+	pod 'IQKeyboardManagerSwift', '~> 4.0'
+	pod 'SVProgressHUD', '~> 2.0'
+	pod 'ActionSheetPicker-3.0', '~> 2.2'
+    pod 'SCRecorder', '~> 2.7'
+    pod 'TPKeyboardAvoiding', '~> 1.3'
+    pod 'SDWebImage', '~> 3.8'
+    pod 'ASPVideoPlayer', '~> 1.2'
+    pod 'SCLAlertView', '~> 0.7'
+    pod 'iCarousel', '~> 1.8'
+    pod 'UberRides', :git => 'https://github.com/long/rides-ios-sdk.git', :branch => 'swift-3-dev’
+    pod 'AirPlay', :git => 'https://github.com/dbburgess/AirPlay.git', :branch => 'swift3'
+end

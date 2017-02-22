@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3f194d0e-5e5b-4fa2-bbd6-3b506c90219c" name="ANO" url="http://35.165.232.110">
+        <fileTransfer host="35.165.232.110" port="22" privateKey="$PROJECT_DIR$/ANO_EC2.pem" rootFolder="/var/www/html/api" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

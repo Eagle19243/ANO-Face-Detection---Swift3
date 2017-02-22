@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "CameraViewController.onUpdatedEvents() -&gt; ():CameraViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "PreviewViewController.viewDidLoad() -&gt; ():PreviewViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "WebService.(login(UserName : String, UserPass : String, completion : (UserObj?, String?) -&gt; ()) -&gt; ()).(closure #1):WebService.swift">
+      </ContextState>
+      <ContextState
+         contextName = "GlobalService.updateUserLocation(CLLocation) -&gt; ():GlobalService.swift">
+      </ContextState>
+      <ContextState
+         contextName = "GlobalService.(updateUserLocation(CLLocation) -&gt; ()).(closure #1):GlobalService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Date()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

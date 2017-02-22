@@ -1,0 +1,1165 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "ANO",
+        "description": "ANO API Explorer"
+    },
+    "host": "35.165.232.110",
+    "basePath": "/api/v1",
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json",
+        "text/html",
+        "image/jpeg"
+    ],
+    "produces": [
+        "application/json",
+        "text/html",
+        "image/jpeg"
+    ],
+    "paths": {
+        "/users": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Signup new user",
+                "parameters": [
+                    {
+                        "name": "user_name",
+                        "in": "query",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "user_phone",
+                        "in": "query",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "user_pass",
+                        "in": "query",
+                        "type": "string",
+                        "format": "password",
+                        "required": true
+                    },
+                    {
+                        "name": "user_device_token",
+                        "in": "query",
+                        "type": "string",
+                        "required": false
+                    },
+                    {
+                        "name": "user_device_type",
+                        "in": "query",
+                        "type": "string",
+                        "enum": ["iOS", "Android"],
+                        "default": "iOS",
+                        "description": "user device type",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Create a new user",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Update user",
+                "parameters": [
+                    {
+                        "name": "AccessToken",
+                        "in": "header",
+                        "type": "string",
+                        "description": "User Access Token",
+                        "required": true
+                    },
+                    {
+                        "name": "user_gender",
+                        "in": "query",
+                        "type": "string",
+                        "required": false
+                    },
+                    {
+                        "name": "user_birthday",
+                        "in": "query",
+                        "type": "string",
+                        "format": "date",
+                        "required": true
+                    },
+                    {
+                        "name": "user_stats",
+                        "in": "query",
+                        "type": "string",
+                        "format": "password",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Update user",
+                        "schema": {
+                            "$ref": "#/definitions/Result"
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/login": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Login user",
+                "parameters": [
+                    {
+                        "name": "user_name",
+                        "in": "query",
+                        "type": "string",
+                        "description": "user name",
+                        "required": true
+                    },
+                    {
+                        "name": "user_pass",
+                        "in": "query",
+                        "description": "user password",
+                        "type": "string",
+                        "format": "password",
+                        "required": true
+                    },
+                    {
+                        "name": "user_device_type",
+                        "in": "query",
+                        "type": "string",
+                        "enum": ["iOS", "Android"],
+                        "default": "iOS",
+                        "description": "user device type",
+                        "required": true
+                    },
+                    {
+                        "name": "user_device_token",
+                        "in": "query",
+                        "type": "string",
+                        "description": "user device token",
+                        "required": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get authorized user",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/update/password": {
+            "patch": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Update user password",
+                "parameters": [
+                    {
+                        "name": "AccessToken",
+                        "in": "header",
+                        "type": "string",
+                        "description": "User Access Token",
+                        "required": true
+                    },
+                    {
+                        "name": "user_current_pass",
+                        "in": "query",
+                        "type": "string",
+                        "format": "password",
+                        "description": "user current password",
+                        "required": true
+                    },
+                    {
+                        "name": "user_new_pass",
+                        "in": "query",
+                        "type": "string",
+                        "format": "password",
+                        "description": "user new password",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "update user password",
+                        "schema": {
+                            "$ref": "#/definitions/Result"
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/reset/password": {
+            "patch": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Reset user password",
+                "parameters": [
+                    {
+                        "name": "user_phone",
+                        "in": "query",
+                        "type": "string",
+                        "description": "user phone number",
+                        "required": true
+                    },
+                    {
+                        "name": "user_pass",
+                        "in": "query",
+                        "type": "string",
+                        "format": "password",
+                        "description": "user current password",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "reset user password",
+                        "schema": {
+                            "$ref": "#/definitions/Result"
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/{id}/logout": {
+            "delete": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Logout user",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "ID of the user",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Logout user",
+                        "schema": {
+                            "$ref": "#/definitions/Result"
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/events/{id}": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Attend event",
+                "parameters": [
+                    {
+                        "name": "AccessToken",
+                        "in": "header",
+                        "type": "string",
+                        "description": "User Access Token",
+                        "required": true
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "ID of the event",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Attend event",
+                        "schema": {
+                            "$ref": "#/definitions/Result"
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/events": {
+            "post": {
+                "tags": [
+                    "Event"
+                ],
+                "summary": "Create new an event",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "parameters": [
+                    {
+                        "name": "AccessToken",
+                        "in": "header",
+                        "type": "string",
+                        "description": "User Access Token",
+                        "required": true
+                    },
+                    {
+                        "name": "event_name",
+                        "in": "formData",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "event_description",
+                        "in": "formData",
+                        "type": "string",
+                        "required": false
+                    },
+                    {
+                        "name": "event_latitude",
+                        "in": "formData",
+                        "type": "number",
+                        "format": "float",
+                        "required": true
+                    },
+                    {
+                        "name": "event_longitude",
+                        "in": "formData",
+                        "type": "number",
+                        "format": "float",
+                        "required": true
+                    },
+                    {
+                        "name": "event_time",
+                        "in": "formData",
+                        "type": "string",
+                        "format": "date-time",
+                        "required": true
+                    },
+                    {
+                        "name": "event_type",
+                        "in": "formData",
+                        "type": "string",
+                        "enum": [
+                            "PUBLIC", "SEMI-PUBLIC", "PRIVATE"
+                        ],
+                        "default": "PUBLIC",
+                        "required": true
+                    },
+                    {
+                        "name": "event_enable_uber",
+                        "in": "formData",
+                        "type": "boolean",
+                        "default": false,
+                        "required": true
+                    },
+                    {
+                        "name": "event_photo",
+                        "in": "formData",
+                        "type": "file",
+                        "description": "event photo",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Create new an event",
+                        "schema": {
+                            "$ref": "#/definitions/Event"
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/events/active": {
+            "get": {
+                "tags": [
+                    "Event"
+                ],
+                "summary": "Get active events",
+                "parameters": [
+                    {
+                        "name": "AccessToken",
+                        "in": "header",
+                        "type": "string",
+                        "description": "User Access Token",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get active events",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Event"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/events/{id}/add/email": {
+            "patch": {
+                "tags": [
+                    "Event"
+                ],
+                "summary": "Add email for semi-public event",
+                "parameters": [
+                    {
+                        "name": "AccessToken",
+                        "in": "header",
+                        "type": "string",
+                        "description": "User Access Token",
+                        "required": true
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "Id of event",
+                        "required": true
+                    },
+                    {
+                        "name": "event_email",
+                        "in": "query",
+                        "type": "string",
+                        "description": "event email",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Add email to event",
+                        "schema": {
+                            "$ref": "#/definitions/Result"
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/events/{id}/verify/email": {
+            "get": {
+                "tags": [
+                    "Event"
+                ],
+                "summary": "Verify semi-public event email address",
+                "parameters": [
+                    {
+                        "name": "AccessToken",
+                        "in": "header",
+                        "type": "string",
+                        "description": "User Access Token",
+                        "required": true
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "Id of event",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Verify user email address",
+                        "schema": {
+                            "$ref": "#/definitions/Result"
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/events/{id}/photos": {
+            "post": {
+                "tags": [
+                    "Event"
+                ],
+                "summary": "Upload event photo",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "parameters": [
+                    {
+                        "name": "AccessToken",
+                        "in": "header",
+                        "type": "string",
+                        "description": "User Access Token",
+                        "required": true
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "Id of event",
+                        "required": true
+                    },
+                    {
+                        "name": "media_photo",
+                        "in": "formData",
+                        "type": "file",
+                        "description": "media photo",
+                        "required": true
+                    },
+                    {
+                        "name": "media_type",
+                        "in": "formData",
+                        "type": "string",
+                        "enum": [
+                            "LIBRARY", "CAMERA"
+                        ],
+                        "default": "LIBRARY",
+                        "description": "media type",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Upload media photo",
+                        "schema": {
+                            "$ref": "#/definitions/Media"
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/events/{id}/videos": {
+            "post": {
+                "tags": [
+                    "Event"
+                ],
+                "summary": "Upload event video",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "parameters": [
+                    {
+                        "name": "AccessToken",
+                        "in": "header",
+                        "type": "string",
+                        "description": "User Access Token",
+                        "required": true
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "Id of event",
+                        "required": true
+                    },
+                    {
+                        "name": "media_photo",
+                        "in": "formData",
+                        "type": "file",
+                        "description": "media photo",
+                        "required": true
+                    },
+                    {
+                        "name": "media_video",
+                        "in": "formData",
+                        "type": "file",
+                        "description": "media video",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Upload media photo",
+                        "schema": {
+                            "$ref": "#/definitions/Media"
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/events/{id}/medias": {
+            "get": {
+                "tags": [
+                    "Event"
+                ],
+                "summary": "Get event medias",
+                "parameters": [
+                    {
+                        "name": "AccessToken",
+                        "in": "header",
+                        "type": "string",
+                        "description": "User Access Token",
+                        "required": true
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "ID of the event",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get event medias",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Media"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/events/{id}/vibes": {
+            "post": {
+                "tags": [
+                    "Event"
+                ],
+                "summary": "Create event vibe",
+                "parameters": [
+                    {
+                        "name": "AccessToken",
+                        "in": "header",
+                        "type": "string",
+                        "description": "User Access Token",
+                        "required": true
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "ID of the event",
+                        "required": true
+                    },
+                    {
+                        "name": "vibe_text",
+                        "in": "query",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Create new a vibe",
+                        "schema": {
+                            "$ref": "#/definitions/Vibe"
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "Event"
+                ],
+                "summary": "Get event vibes",
+                "parameters": [
+                    {
+                        "name": "AccessToken",
+                        "in": "header",
+                        "type": "string",
+                        "description": "User Access Token",
+                        "required": true
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "ID of the event",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get event vibes",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Vibe"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/events/{id}/users": {
+            "get": {
+                "tags": [
+                    "Event"
+                ],
+                "summary": "Get event users",
+                "parameters": [
+                    {
+                        "name": "AccessToken",
+                        "in": "header",
+                        "type": "string",
+                        "description": "User Access Token",
+                        "required": true
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "ID of the event",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get event users",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/User"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/vibes/{id}": {
+            "post": {
+                "tags": [
+                    "Vibe"
+                ],
+                "summary": "Vote a vibe",
+                "parameters": [
+                    {
+                        "name": "AccessToken",
+                        "in": "header",
+                        "type": "string",
+                        "description": "User Access Token",
+                        "required": true
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "ID of the vibe",
+                        "required": true
+                    },
+                    {
+                        "name": "vibe_vote_type",
+                        "in": "query",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Vote a vibe",
+                        "schema": {
+                            "$ref": "#/definitions/Result"
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/medias/{id}/report": {
+            "post": {
+                "tags": [
+                    "Media"
+                ],
+                "summary": "Report a media",
+                "parameters": [
+                    {
+                        "name": "AccessToken",
+                        "in": "header",
+                        "type": "string",
+                        "description": "User Access Token",
+                        "required": true
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "ID of the media",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Report a media",
+                        "schema": {
+                            "$ref": "#/definitions/Result"
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/medias/{id}/read": {
+            "post": {
+                "tags": [
+                    "Media"
+                ],
+                "summary": "Read a media",
+                "parameters": [
+                    {
+                        "name": "AccessToken",
+                        "in": "header",
+                        "type": "string",
+                        "description": "User Access Token",
+                        "required": true
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "ID of the media",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Read a media",
+                        "schema": {
+                            "$ref": "#/definitions/Result"
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/send/code": {
+            "post": {
+                "tags": [
+                    "SMS"
+                ],
+                "summary": "Send verification code to phone number",
+                "parameters": [
+                    {
+                        "name": "phone_number",
+                        "in": "query",
+                        "type": "string",
+                        "description": "user phone number",
+                        "required": true
+                    },
+                    {
+                        "name": "verification_code",
+                        "in": "query",
+                        "type": "string",
+                        "description": "verification code",
+                        "required": true
+                    },
+                    {
+                        "name": "is_sign_up",
+                        "in": "query",
+                        "type": "boolean",
+                        "description": "indicator sign up or not",
+                        "default": true,
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Sent verification code",
+                        "schema": {
+                            "$ref": "#/definitions/Result"
+                        }
+                    },
+                    "400": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "User": {
+            "type": "object",
+            "properties": {
+                "user_id": {
+                    "type": "integer"
+                },
+                "user_name": {
+                    "type": "string"
+                },
+                "user_pass": {
+                    "type": "string",
+                    "format": "password"
+                },
+                "user_phone": {
+                    "type": "string"
+                },
+                "user_gender": {
+                    "type": "string"
+                },
+                "user_birthday": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "user_stats": {
+                    "type": "string"
+                },
+                "user_device_token": {
+                    "type": "string"
+                },
+                "user_device_type": {
+                    "type": "string"
+                },
+                "user_created_at": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "Event": {
+            "type": "object",
+            "properties": {
+                "event_id": {
+                    "type": "integer"
+                },
+                "event_user_id": {
+                    "type": "integer"
+                },
+                "event_name": {
+                    "type": "string"
+                },
+                "event_description": {
+                    "type": "string"
+                },
+                "event_latitude": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "event_longitude": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "event_time": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "event_type": {
+                    "type": "string"
+                },
+                "event_email": {
+                    "type": "string"
+                },
+                "event_email_verified": {
+                    "type": "boolean"
+                },
+                "event_enable_uber": {
+                    "type": "boolean"
+                },
+                "event_medias": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Media"
+                    }
+                },
+                "event_vibes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Vibe"
+                    }
+                },
+                "event_users": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/User"
+                    }
+                },
+                "event_created_at": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "Media": {
+            "type": "object",
+            "properties": {
+                "media_id": {
+                    "type": "integer"
+                },
+                "media_user_id": {
+                    "type": "integer"
+                },
+                "media_event_id": {
+                    "type": "integer"
+                },
+                "media_video_url": {
+                    "type": "string"
+                },
+                "media_photo_url": {
+                    "type": "string"
+                },
+                "media_type": {
+                    "type": "integer"
+                },
+                "media_created_at": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "Vibe": {
+            "type": "object",
+            "properties": {
+                "vibe_id": {
+                    "type": "integer"
+                },
+                "vibe_event_id": {
+                    "type": "integer"
+                },
+                "vibe_text": {
+                    "type": "string"
+                },
+                "vibe_likes": {
+                    "type": "integer"
+                },
+                "vibe_dislikes": {
+                    "type": "integer"
+                },
+                "vibe_created_at": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "Result": {
+            "type": "object",
+            "properties": {
+                "message": {
+                    "type": "string"
+                }
+            }
+        },
+        "Error": {
+            "type": "object",
+            "properties": {
+                "message": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

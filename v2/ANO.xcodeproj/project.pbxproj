@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		81CFCC2D595B7CBDA51D97F9 /* Pods_ANO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D23A8D317E41EF53C64BED /* Pods_ANO.framework */; };
+		DB29C7A31DFFAC70001C847A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C7A21DFFAC70001C847A /* AppDelegate.swift */; };
+		DB29C7A81DFFAC70001C847A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB29C7A61DFFAC70001C847A /* Main.storyboard */; };
+		DB29C7AA1DFFAC70001C847A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB29C7A91DFFAC70001C847A /* Assets.xcassets */; };
+		DB29C7AD1DFFAC70001C847A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB29C7AB1DFFAC70001C847A /* LaunchScreen.storyboard */; };
+		DB29C7BB1DFFCE7A001C847A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB29C7B61DFFCE7A001C847A /* GoogleService-Info.plist */; };
+		DB29C7BC1DFFCE7A001C847A /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C7B91DFFCE7A001C847A /* FirebaseService.swift */; };
+		DB29C7BD1DFFCE7A001C847A /* GlobalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C7BA1DFFCE7A001C847A /* GlobalService.swift */; };
+		DB29C7BF1DFFD130001C847A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C7BE1DFFD130001C847A /* User.swift */; };
+		DB29C7C11DFFD1B5001C847A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C7C01DFFD1B5001C847A /* Constants.swift */; };
+		DB29C7C31DFFD3BF001C847A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C7C21DFFD3BF001C847A /* LoginViewController.swift */; };
+		DB29C7C61DFFD629001C847A /* Bubble Letters.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB29C7C51DFFD629001C847A /* Bubble Letters.ttf */; };
+		DB29C7C81DFFD7D2001C847A /* ANOButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C7C71DFFD7D2001C847A /* ANOButton.swift */; };
+		DB29C7CA1DFFF0E2001C847A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C7C91DFFF0E2001C847A /* CameraViewController.swift */; };
+		DB29C7D01E004CC9001C847A /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C7CF1E004CC9001C847A /* PreviewViewController.swift */; };
+		DB29C7D31E012441001C847A /* ANOVideoOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C7D21E012441001C847A /* ANOVideoOverlay.swift */; };
+		DB29C7D51E012481001C847A /* ANOVideoOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB29C7D41E012481001C847A /* ANOVideoOverlay.xib */; };
+		DB29C7D71E0137DB001C847A /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C7D61E0137DB001C847A /* EventsViewController.swift */; };
+		DB29C7D91E013818001C847A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C7D81E013818001C847A /* Event.swift */; };
+		DB29C7DB1E0139C0001C847A /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C7DA1E0139C0001C847A /* DisplayViewController.swift */; };
+		DB29C7DE1E013A01001C847A /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C7DC1E013A01001C847A /* Feed.swift */; };
+		DB29C7DF1E013A01001C847A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C7DD1E013A01001C847A /* Location.swift */; };
+		DB29C7E31E013DD4001C847A /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C7E01E013DD4001C847A /* EventTableViewCell.swift */; };
+		DB29C7E41E013DD4001C847A /* UniversityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C7E11E013DD4001C847A /* UniversityView.swift */; };
+		DB29C7E51E013DD4001C847A /* UniversityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB29C7E21E013DD4001C847A /* UniversityView.xib */; };
+		DB29C7E71E013FA6001C847A /* EventCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C7E61E013FA6001C847A /* EventCameraViewController.swift */; };
+		DB29C7E91E01404F001C847A /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C7E81E01404F001C847A /* NewEventViewController.swift */; };
+		DB3B4F991E0235FD0093C8E0 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B4F981E0235FD0093C8E0 /* LocationView.swift */; };
+		DB3B4F9B1E0236070093C8E0 /* LocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB3B4F9A1E0236070093C8E0 /* LocationView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		77A6F8D28D2D1337C76A8A34 /* Pods-ANO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ANO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ANO/Pods-ANO.debug.xcconfig"; sourceTree = "<group>"; };
+		84008886D89845674DA473B5 /* Pods-ANO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ANO.release.xcconfig"; path = "Pods/Target Support Files/Pods-ANO/Pods-ANO.release.xcconfig"; sourceTree = "<group>"; };
+		B1D23A8D317E41EF53C64BED /* Pods_ANO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ANO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB29C79F1DFFAC6F001C847A /* ANO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ANO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB29C7A21DFFAC70001C847A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB29C7A71DFFAC70001C847A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB29C7A91DFFAC70001C847A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB29C7AC1DFFAC70001C847A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DB29C7AE1DFFAC70001C847A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB29C7B61DFFCE7A001C847A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DB29C7B91DFFCE7A001C847A /* FirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		DB29C7BA1DFFCE7A001C847A /* GlobalService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalService.swift; sourceTree = "<group>"; };
+		DB29C7BE1DFFD130001C847A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DB29C7C01DFFD1B5001C847A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DB29C7C21DFFD3BF001C847A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DB29C7C51DFFD629001C847A /* Bubble Letters.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bubble Letters.ttf"; sourceTree = "<group>"; };
+		DB29C7C71DFFD7D2001C847A /* ANOButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANOButton.swift; sourceTree = "<group>"; };
+		DB29C7C91DFFF0E2001C847A /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		DB29C7CF1E004CC9001C847A /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		DB29C7D21E012441001C847A /* ANOVideoOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANOVideoOverlay.swift; sourceTree = "<group>"; };
+		DB29C7D41E012481001C847A /* ANOVideoOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANOVideoOverlay.xib; sourceTree = "<group>"; };
+		DB29C7D61E0137DB001C847A /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		DB29C7D81E013818001C847A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		DB29C7DA1E0139C0001C847A /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
+		DB29C7DC1E013A01001C847A /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		DB29C7DD1E013A01001C847A /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		DB29C7E01E013DD4001C847A /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		DB29C7E11E013DD4001C847A /* UniversityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityView.swift; sourceTree = "<group>"; };
+		DB29C7E21E013DD4001C847A /* UniversityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityView.xib; sourceTree = "<group>"; };
+		DB29C7E61E013FA6001C847A /* EventCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCameraViewController.swift; sourceTree = "<group>"; };
+		DB29C7E81E01404F001C847A /* NewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
+		DB3B4F981E0235FD0093C8E0 /* LocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		DB3B4F9A1E0236070093C8E0 /* LocationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB29C79C1DFFAC6F001C847A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81CFCC2D595B7CBDA51D97F9 /* Pods_ANO.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9E38BDFDCD4C925B8FE4415C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1D23A8D317E41EF53C64BED /* Pods_ANO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA98F4278D16FF6750512BBA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77A6F8D28D2D1337C76A8A34 /* Pods-ANO.debug.xcconfig */,
+				84008886D89845674DA473B5 /* Pods-ANO.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DB29C7961DFFAC6F001C847A = {
+			isa = PBXGroup;
+			children = (
+				DB29C7A11DFFAC6F001C847A /* ANO */,
+				DB29C7A01DFFAC6F001C847A /* Products */,
+				DA98F4278D16FF6750512BBA /* Pods */,
+				9E38BDFDCD4C925B8FE4415C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DB29C7A01DFFAC6F001C847A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB29C79F1DFFAC6F001C847A /* ANO.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB29C7A11DFFAC6F001C847A /* ANO */ = {
+			isa = PBXGroup;
+			children = (
+				DB29C7C41DFFD629001C847A /* Fonts */,
+				DB29C7C01DFFD1B5001C847A /* Constants.swift */,
+				DB29C7B41DFFCE7A001C847A /* Controllers */,
+				DB29C7B51DFFCE7A001C847A /* CustomViews */,
+				DB29C7B61DFFCE7A001C847A /* GoogleService-Info.plist */,
+				DB29C7B71DFFCE7A001C847A /* Models */,
+				DB29C7B81DFFCE7A001C847A /* Services */,
+				DB29C7A21DFFAC70001C847A /* AppDelegate.swift */,
+				DB29C7A61DFFAC70001C847A /* Main.storyboard */,
+				DB29C7A91DFFAC70001C847A /* Assets.xcassets */,
+				DB29C7AB1DFFAC70001C847A /* LaunchScreen.storyboard */,
+				DB29C7AE1DFFAC70001C847A /* Info.plist */,
+			);
+			path = ANO;
+			sourceTree = "<group>";
+		};
+		DB29C7B41DFFCE7A001C847A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB29C7C21DFFD3BF001C847A /* LoginViewController.swift */,
+				DB29C7C91DFFF0E2001C847A /* CameraViewController.swift */,
+				DB29C7CF1E004CC9001C847A /* PreviewViewController.swift */,
+				DB29C7D61E0137DB001C847A /* EventsViewController.swift */,
+				DB29C7DA1E0139C0001C847A /* DisplayViewController.swift */,
+				DB29C7E61E013FA6001C847A /* EventCameraViewController.swift */,
+				DB29C7E81E01404F001C847A /* NewEventViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DB29C7B51DFFCE7A001C847A /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				DB29C7E01E013DD4001C847A /* EventTableViewCell.swift */,
+				DB29C7E11E013DD4001C847A /* UniversityView.swift */,
+				DB29C7E21E013DD4001C847A /* UniversityView.xib */,
+				DB29C7C71DFFD7D2001C847A /* ANOButton.swift */,
+				DB29C7D21E012441001C847A /* ANOVideoOverlay.swift */,
+				DB29C7D41E012481001C847A /* ANOVideoOverlay.xib */,
+				DB3B4F981E0235FD0093C8E0 /* LocationView.swift */,
+				DB3B4F9A1E0236070093C8E0 /* LocationView.xib */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		DB29C7B71DFFCE7A001C847A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DB29C7DC1E013A01001C847A /* Feed.swift */,
+				DB29C7DD1E013A01001C847A /* Location.swift */,
+				DB29C7D81E013818001C847A /* Event.swift */,
+				DB29C7BE1DFFD130001C847A /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DB29C7B81DFFCE7A001C847A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DB29C7B91DFFCE7A001C847A /* FirebaseService.swift */,
+				DB29C7BA1DFFCE7A001C847A /* GlobalService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DB29C7C41DFFD629001C847A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DB29C7C51DFFD629001C847A /* Bubble Letters.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB29C79E1DFFAC6F001C847A /* ANO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB29C7B11DFFAC70001C847A /* Build configuration list for PBXNativeTarget "ANO" */;
+			buildPhases = (
+				EAB60403AF4177C30A1CD003 /* [CP] Check Pods Manifest.lock */,
+				DB29C79B1DFFAC6F001C847A /* Sources */,
+				DB29C79C1DFFAC6F001C847A /* Frameworks */,
+				DB29C79D1DFFAC6F001C847A /* Resources */,
+				AFE51D98CA47B72A079EDF7E /* [CP] Embed Pods Frameworks */,
+				692A2551CD57E176BCCB6C0B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ANO;
+			productName = ANO;
+			productReference = DB29C79F1DFFAC6F001C847A /* ANO.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB29C7971DFFAC6F001C847A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = DMSoft;
+				TargetAttributes = {
+					DB29C79E1DFFAC6F001C847A = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = H23ZZ6B45F;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = DB29C79A1DFFAC6F001C847A /* Build configuration list for PBXProject "ANO" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB29C7961DFFAC6F001C847A;
+			productRefGroup = DB29C7A01DFFAC6F001C847A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB29C79E1DFFAC6F001C847A /* ANO */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB29C79D1DFFAC6F001C847A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB29C7C61DFFD629001C847A /* Bubble Letters.ttf in Resources */,
+				DB29C7AD1DFFAC70001C847A /* LaunchScreen.storyboard in Resources */,
+				DB29C7BB1DFFCE7A001C847A /* GoogleService-Info.plist in Resources */,
+				DB29C7AA1DFFAC70001C847A /* Assets.xcassets in Resources */,
+				DB29C7E51E013DD4001C847A /* UniversityView.xib in Resources */,
+				DB3B4F9B1E0236070093C8E0 /* LocationView.xib in Resources */,
+				DB29C7A81DFFAC70001C847A /* Main.storyboard in Resources */,
+				DB29C7D51E012481001C847A /* ANOVideoOverlay.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		692A2551CD57E176BCCB6C0B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ANO/Pods-ANO-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFE51D98CA47B72A079EDF7E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ANO/Pods-ANO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAB60403AF4177C30A1CD003 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB29C79B1DFFAC6F001C847A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB29C7D71E0137DB001C847A /* EventsViewController.swift in Sources */,
+				DB29C7C31DFFD3BF001C847A /* LoginViewController.swift in Sources */,
+				DB29C7C81DFFD7D2001C847A /* ANOButton.swift in Sources */,
+				DB29C7DE1E013A01001C847A /* Feed.swift in Sources */,
+				DB29C7C11DFFD1B5001C847A /* Constants.swift in Sources */,
+				DB29C7DB1E0139C0001C847A /* DisplayViewController.swift in Sources */,
+				DB29C7E71E013FA6001C847A /* EventCameraViewController.swift in Sources */,
+				DB29C7D91E013818001C847A /* Event.swift in Sources */,
+				DB29C7DF1E013A01001C847A /* Location.swift in Sources */,
+				DB29C7E31E013DD4001C847A /* EventTableViewCell.swift in Sources */,
+				DB29C7BF1DFFD130001C847A /* User.swift in Sources */,
+				DB29C7E91E01404F001C847A /* NewEventViewController.swift in Sources */,
+				DB29C7BD1DFFCE7A001C847A /* GlobalService.swift in Sources */,
+				DB29C7D31E012441001C847A /* ANOVideoOverlay.swift in Sources */,
+				DB29C7CA1DFFF0E2001C847A /* CameraViewController.swift in Sources */,
+				DB29C7BC1DFFCE7A001C847A /* FirebaseService.swift in Sources */,
+				DB29C7A31DFFAC70001C847A /* AppDelegate.swift in Sources */,
+				DB3B4F991E0235FD0093C8E0 /* LocationView.swift in Sources */,
+				DB29C7D01E004CC9001C847A /* PreviewViewController.swift in Sources */,
+				DB29C7E41E013DD4001C847A /* UniversityView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DB29C7A61DFFAC70001C847A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB29C7A71DFFAC70001C847A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DB29C7AB1DFFAC70001C847A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB29C7AC1DFFAC70001C847A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB29C7AF1DFFAC70001C847A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_PKGINFO_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DB29C7B01DFFAC70001C847A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_PKGINFO_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB29C7B21DFFAC70001C847A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77A6F8D28D2D1337C76A8A34 /* Pods-ANO.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H23ZZ6B45F;
+				INFOPLIST_FILE = ANO/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = C.ANO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DB29C7B31DFFAC70001C847A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84008886D89845674DA473B5 /* Pods-ANO.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H23ZZ6B45F;
+				INFOPLIST_FILE = ANO/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = C.ANO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB29C79A1DFFAC6F001C847A /* Build configuration list for PBXProject "ANO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB29C7AF1DFFAC70001C847A /* Debug */,
+				DB29C7B01DFFAC70001C847A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB29C7B11DFFAC70001C847A /* Build configuration list for PBXNativeTarget "ANO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB29C7B21DFFAC70001C847A /* Debug */,
+				DB29C7B31DFFAC70001C847A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB29C7971DFFAC6F001C847A /* Project object */;
+}
